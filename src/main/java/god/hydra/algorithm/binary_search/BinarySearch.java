@@ -14,6 +14,8 @@ public class BinarySearch implements AlgorithmDef {
      * @return 返回目标值的索引，未找到返回-1
      */
     public int binarySearch(int[] nums, int target){
+//        校验
+        if (nums.length == 0) return -1;
 //        初始化左边界和右边界
         int left = 0;
         int right = nums.length - 1;
@@ -40,5 +42,34 @@ public class BinarySearch implements AlgorithmDef {
             }
         }
         return -1;
+    }
+
+    /**
+     * 查询带有重复元素的数组，返回最左边的索引
+     * 比如{1, 2, 2, 3} 查2返回1
+     * @param nums 给定数组
+     * @param target 需要查询的目标值
+     * @return 返回目标值的索引，找到返回最左边的索引，未找到返回-1
+     */
+    public int binarySearchLeftBound(int[] nums, int target){
+//        TODO 完善
+//        校验
+        if (nums.length == 0) return -1;
+//        初始化左边界和右边界
+        int left = 0;
+        int right = nums.length - 1;
+
+        while (left <= right) {
+//            这里等同(left + right) / 2,这样写防止left right直接相加造成int溢出
+            int mid = left + (right - left) / 2;
+            if (target == nums[mid]) right = mid + 1;
+            else if (target > nums[mid]) {
+                left = mid + 1;
+            } else if (target < nums[mid]) {
+//                和上述同理
+                right = mid - 1;
+            }
+        }
+        return left;
     }
 }

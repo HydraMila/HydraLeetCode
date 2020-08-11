@@ -1,6 +1,7 @@
 package god.hydra;
 
 import god.hydra.algorithm.binary_search.BinarySearch;
+import god.hydra.algorithm.climbing_stairs.ClimbingStairs;
 import god.hydra.algorithm.move_zero.MoveZero;
 
 /**
@@ -19,9 +20,18 @@ public class Application {
         moveZero.printAnswer(testArr);*/
 
 //        二分查找法具体实现
-        int[] nums = {1, 3, 5, 7, 9, 11};
+//        BinarySearch binarySearch = new BinarySearch();
+        /*int[] nums = {1, 3, 5, 7, 9, 11};
         BinarySearch binarySearch = new BinarySearch();
-        binarySearch.printAnswer(binarySearch.binarySearch(nums, 7));
+        binarySearch.printAnswer(binarySearch.binarySearch(nums, 8));*/
+
+        /*int[] numsLeft = {1, 2, 2, 2, 4};
+        binarySearch.printAnswer(binarySearch.binarySearchLeftBound(numsLeft, 2));*/
+
+//        爬楼梯
+        ClimbingStairs climbingStairs = new ClimbingStairs();
+        climbingStairs.printAnswer(climbingStairs.climbingStairs(6));
+        climbingStairs.printAnswer(climbingStairs.climbingStairsFinb(6));
     }
 
 
