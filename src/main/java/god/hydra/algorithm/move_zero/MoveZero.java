@@ -1,4 +1,6 @@
-package god.hydra.move_zero;
+package god.hydra.algorithm.move_zero;
+
+import god.hydra.classDef.AlgorithmDef;
 
 /**
  * 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
@@ -16,7 +18,7 @@ package god.hydra.move_zero;
  * 链接：https://leetcode-cn.com/problems/move-zeroes
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class MoveZero {
+public class MoveZero implements AlgorithmDef {
 
     /*
     解题思路：
